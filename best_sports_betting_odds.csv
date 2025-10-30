@@ -1,0 +1,16 @@
+"section","entry_type","content"
+"wikitable_1","table","Decimal | Fractional | US | Hong Kong | Indo | Malay | Implied probability
+1.50 | 1/2 | −200 | 0.50 | −2.00 | 0.50 | 1 in 1.5 = 67%
+2.00 | Evens (1/1) | +100 | 1.00 | 1.00 | 1.00 | 1 in 2 = 50%
+2.50 | 3/2 | +150 | 1.50 | 1.50 | −0.67 | 1 in 2.5 = 40%
+3.00 | 2/1 | +200 | 2.00 | 2.00 | −0.50 | 1 in 3 = 33%"
+"wikitable_2","table","x | To | Do this
+Decimal | Fractional | x −1, then convert to fraction
+Decimal | US | 100( x −1) if x >2; −100/( x −1) if x <2
+Fractional | Decimal | divide fraction, then x +1
+Fractional | US | divide fraction, then 100 x if x ≥1; −100/ x if x <1
+US | Decimal | ( x /100)+1 if x >0; (−100/ x )+1 if x <0
+US | Fractional | x /100 if x >0; −100/ x if x <0; then convert to fraction
+Decimal | Hong Kong | x −1
+Hong Kong | Indo | x if x ≥1; −1/ x if x <1
+Hong Kong | Malay | x if x ≤1; −1/x if x >1"

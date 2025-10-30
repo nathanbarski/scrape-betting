@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# theBet - start the Sports Betting DB web server
+# Usage: ./theBet
+# If a virtualenv named .venv exists in the repo root it will be activated automatically.
+
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "${SCRIPT_DIR}"
+
+# activate venv if present
+if [ -f ".venv/bin/activate" ]; then
+  # shellcheck source=/dev/null
+  . .venv/bin/activate
+fi
+
+# Ensure requirements installed (optional check)
+if ! python3 -c "import flask" >/dev/null 2>&1; then
+  echo "Flask not found. Installing from requirements.txt (this may take a moment)..."
+  python3 -m pip install -r requirements.txt
+fi
+
+echo "Starting the sports betting web server (Ctrl-C to stop)..."
+python3 scripts/web_app.py
